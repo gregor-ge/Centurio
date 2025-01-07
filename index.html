@@ -1,0 +1,486 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Centurio: On Drivers of Multilingual Ability of Large Vision-Language Model</title>
+        <link rel="icon" type="image/x-icon" href="/static/img/icons/image.png">
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Open Graph -->
+        <meta property="og:url" content="https://centurio.github.io" />
+<!--        <meta property="og:image" content="https://nan.png" />-->
+        <meta property="og:title" content="Centurio: On Drivers of Multilingual Ability of Large Vision-Language Model" />
+        <meta property="og:description" content="" />
+        
+        <!-- Twitter -->
+        <meta name="twitter:url" content="https://centurio.github.io" />
+        <meta name="twitter:card" content="summary_large_image" />
+<!--        <meta name="twitter:image" content="https://nan.png" />-->
+        <meta name="twitter:title" content="Centurio: On Drivers of Multilingual Ability of Large Vision-Language Model" />
+        <meta name="twitter:description" content="" />
+       
+        <script src="./static/js/distill_template.v2.js"></script>
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+        <script src="https://d3js.org/d3.v5.min.js"></script>
+        <script src="https://d3js.org/d3-collection.v1.min.js"></script>
+        <script src="https://rawgit.com/nstrayer/slid3r/master/dist/slid3r.js"></script>
+
+        <script defer="" src="./static/js/hider.js"></script>
+        <script src="./static/js/image_interact.js"></script>
+        <script src="./static/js/switch_videos.js"></script>
+
+        <link rel="stylesheet" href="./static/css/style.css">
+        <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+        
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.css" integrity="sha384-yFRtMMDnQtDRO8rLpMIKrtPCD5jdktao2TV19YiZYWMDkUR5GQZR/NOVTdquEx1j" crossorigin="anonymous">
+        <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.js" integrity="sha384-9Nhn55MVVN0/4OFx7EE5kpFBPsEMZxKTCnA+4fqDmg12eCTqGi6+BB2LjY8brQxJ" crossorigin="anonymous"></script>
+        <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"
+            onload="renderMathInElement(document.body);"></script>
+        <script defer src="./static/js/fontawesome.all.min.js"></script>
+
+
+        <!-- medium zoom https://github.com/francoischalifour/medium-zoom -->
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>  <!-- jquery -->
+        <script defer src="./static/js/medium-zoom.min.js"></script>
+        <script defer src="./static/js/zoom.js"></script>
+    </head>
+    <body>
+        <div class="header-wrapper">
+            <div class="header-container" id="header-container">
+                <div class="header-content">
+                    <h2 class="main-title"><i>Centurio</i>: On Drivers of Multilingual Ability of  Large Vision-Language Model</h2>
+
+                    <div class="icon-container">
+                        <div class="icon-item">
+<!--                            <img src="./static/img/icons/centurio_logo.png" alt="Centurio Icon">-->
+                            <div><strong>Training Language Composition</strong>: We explore with <i>how many</i> languages and with <i>how much</i> multilingual data to train to balance multilingual and English performance.</div>
+                        </div>
+                    </div>
+                    <div class="icon-container">
+                        <div class="icon-item">
+<!--                            <img src="./static/img/icons/centurio_logo.png" alt="Centurio Icon">-->
+                            <div><strong>Multilingual OCR</strong>: We explore how to best boost multilingual OCR capabilities and present a new evaluation dataset (SMPQA).</div>
+                        </div>
+                    </div>
+                    <div class="icon-container">
+                        <div class="icon-item">
+<!--                            <img src="./static/img/icons/centurio_logo.png" alt="Centurio Icon">-->
+                            <div><strong>Centurio Qwen & Aya</strong>: We train strong large vision-language models with 100 languages using our lessons learned.</div>
+                        </div>
+                    </div>
+        
+                    <div class="button-container">
+                        <a href="https://arxiv.org/abs/TODO" class="button paper-link" target="_blank">
+                            <span class="icon is-small">
+                                <i class="ai ai-arxiv"></i>
+                            </span>
+                            arXiv
+                        </a>
+                        <a href="https://arxiv.org/pdf/TODO" class="button paper-link" target="_blank">
+                            <span class="icon is-small">
+                                <i class="fas fa-file-pdf"></i>
+                            </span>
+                            <span>PDF</span>
+                        </a>
+                        <a href="https://github.com/gregor-ge/Centurio" class="button" target="_blank">
+                            <span class="icon is-small">
+                                <i class="fab fa-github"></i>
+                            </span>
+                            <span>Code</span>
+                        </a>
+                        <a href="https://huggingface.co/collections/WueNLP/centurio-677cf0ab6ddea874927a154e" class="button" target="_blank">
+                            <span class="icon is-small">
+                                <img src="https://huggingface.co/front/assets/huggingface_logo-noborder.svg" alt="Hugging Face logo" class="hf-logo">
+                            </span>
+                            <span>HuggingFace Collection</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="header-image">
+                    <img draggable="false" src="static/img/icons/image.png" alt="Teaser Image" class="teaser-image small-teaser">
+                </div>
+            </div>
+        </div>
+        
+    <d-article>
+        <div class="byline">
+            <div class="byline-container">
+                <p>
+                    <a href="" class="author-link" target="_blank">Gregor Geigle<sup>*12</sup></a> &emsp;
+                    <a href="" class="author-link" target="_blank">Florian Schneider<sup>*3</sup></a> &emsp;
+                    <a href="" class="author-link" target="_blank">Carolin Holtermann<sup>4</sup></a> &emsp;
+                    <a href="" class="author-link" target="_blank">Chris Biemann<sup>3</sup></a> &emsp;
+                    <a href="" class="author-link" target="_blank">Radu Timofte<sup>2</sup></a> &emsp;
+                    <a href="" class="author-link" target="_blank">Anne Lauscher<sup>4</sup></a> &emsp;
+                    <a href="" class="author-link" target="_blank">Goran Glavaš<sup>1</sup></a> &emsp;
+                    <p></p>
+                    <a href="" class="affiliation-link" id="affiliation" target="_blank"><sup>1</sup>WüNLP, University of Würzburg<br>
+                        <sup>2</sup>Computer Vision Lab, University of Würzburg<br>
+                        <sup>3</sup>Language Technology Group, University of Hamburg<br>
+                    <sup>4</sup>Data Science, University of Würzburg<br></a>
+                </p>
+            </div>
+        </div>
+        <p style="text-align: center;">
+            <span class="author-note"><sup>*</sup>Equal Contributions</span>&emsp;
+            <span class="author-note">Corresponding to: (gregor.geigle|florian.schneider-1) [at] uni-(wuerzburg|hamburg).de</span>
+        </p>
+      
+        
+        <p class="text abstract">
+
+            <i>Multilingual</i> large vision-language model (LVLM) should be able to understand inputs in different languages - both in the text and image modality - while generating output in different languages.
+            To achieve this, training with multilingual and not just English data is necessary.
+            However, prior work used largely ad-hoc choices for their training data language composition with no deeper insight into their choices.
+            In this work, we comprehensively analyze how to best compose the data for training, as illustrated in <a href="#fig:teaser">Figure 1</a>.
+            Finally, using the lessons learned, we then train and release Centurio Qwen & Aya, two strong multilingual LVLMs with state-of-the-art performance over 14 tasks against other open-weight models.
+
+        </p>
+        <d-figure id="fig:teaser" style="display: flex; justify-content: center;">
+            <figure>
+                <img data-zoomable="" draggable="false" src="static/img/fig1.png" alt="teaser" style="width: 100%" class="center">
+                <figcaption>
+                    <strong>Figure 1:</strong> Our exploration of drivers for multilingual abilities:<br> (1) how many languages? (2) how much multilingual? (3) multilingual OCR?
+                </figcaption>
+            </figure>
+        </d-figure>
+
+        <p class="text abstract">
+            We summarize now our key findings. For a more detailed discussion, consider reading the paper.
+            <ol class="text">
+                <li><strong><a href="#exploration">&sect;Exploring Drivers of Multilingual Abilities</a></strong>: We summarize our exploration and report our findings for best practices.</li>
+                <li><strong><a href="#centurio">&sect;Centurio - Applying Lessons Learned</a></strong>: We scale up our setup to train the SoTA Centurio models. </li>
+            </ol>
+        </p>
+
+
+        <div class="icon-row">
+            <a href="#exploration" class="icon-link">
+                Exploring Drivers
+            </a>
+            <a href="#centurio" class="icon-link">
+<!--                <img src="static/img/icons/data.png" alt="Data Logo" class="icon">-->
+                Centurio
+            </a>
+
+        </div>
+
+        <p class="click-hint" style="width: 85%;">
+            <img src="static/img/icons/click.gif" style="width: 1.5rem">
+            <strong>Click to jump to each section.</strong>
+        </p>
+        
+        <hr>
+
+<!--      <d-cite key="yu-etal-2022-beyond"></d-cite>  #-->
+
+        <div id='exploration' class="exploration-block">
+            <div id="sec:exploration" class="sub-section">
+                <h1 class="text">Exploring Drivers of Multilingual Abilities</h1>
+
+
+                <p class="text">
+We focus on four research questions, each building on the previous one, designed to identify an optimal multilingual training mix:
+    <ul class="text">
+                    <li><strong>RQ1:</strong> What is the optimal number of training languages?</li>
+<li><strong>RQ2 & RQ3:</strong> What is the optimal distribution of data across languages in (RQ3) pre-training data and (RQ2) instruction-tuning? </li>
+<li><strong>RQ4:</strong> How to improve the understanding of multilingual text in images?</li>
+            </ul>
+                </p>
+
+                <h3 class="text">Experimental Setup</h3>
+                <ul class="text">
+                    <li><strong>Architecture:</strong> LLaVA-like architecture (MLP projects tokens of image encoder (SigLIP) into LLM embedding space).
+                        We train only the MLP and the LLM (using LoRA) and keep the image encoder frozen.
+                    </li>
+                    <li><strong>Training Data:</strong> <i>Instruct-tuning:</i> mix of tasks based on LLaVA-Next. <i>Pre-training:</i> ShareGPT-4V dense captions.
+                    English data is machine-translated (MT) with NLLB to obtain multilingual training data.
+                    </li>
+                    <li><strong>Evaluation :</strong> 13 tasks covering 43 languages.
+                    We group & average results over all tasks by <i>resource tiers</i> of languages (from T5 = high resource to T1 = low resource) using taxonomy of <d-cite key="joshi_state_2020"></d-cite>
+                    </li>
+                </ul>
+                <p class="text">
+                We report the results of models trained with Phi 3.5 as LLM backbone but repeated experiments with Llama 3 showed similar trends, suggesting that these are not LLM-specific results.
+                </p>
+            </div>
+
+
+            <div id="sec:exploration:rq1" class="sub-section">
+                <h2 class="text">RQ1: Number of Training Languages</h2>
+
+                <p class="text">
+                We first investigate on how many languages to actually train with: does training on few high-resource languages and (zero-shot) cross-lingual transfer to unseen languages suffice, or do we need to explicitly include each targeted languages?
+                Conversely, does training with more languages harm the per-language performance, with a smaller portion of the training data now allocated to each language?
+                </p>
+
+                <p class="text">
+                    <strong>Setup:</strong> We train models with the instruct-tuning data, keeping 50% English and translating the rest uniformly over <i>N</i> languages.
+                    We gradually increase <i>N</i>, starting with the highest-resource tier (T5) and then including tiers of lower-resource languages (T4 to T1), one at a time.
+                    This results in the following setups:
+                    T5: (N=6),
+                    T5-T4: (N=24),
+                    T5-T3: (N=52),
+                    T5-T2: (N=69), and finally
+                    L100 (N=99).
+                    For L100, we "fill up" the languages from T5-T2 with languages from T1 until we have N=99.
+                </p>
+
+                <p class="text">
+                    <strong>Results:</strong>
+                    We find that including more languages is generally beneficial for languages now included while only causing small performance degradations (if at all) for languages that were included before.
+                </p>
+
+                <p class="text">
+                    <i>Language Fidelity:</i>
+                    While we see improvements over all tasks, including more languages is particularly important for generative tasks (like image captioning or open VQA), where the model has to produce output in the target languages (=language fidelity).
+                </p>
+
+                <d-figure id="fig:rq1">
+                <figure>
+                    <img data-zoomable="" draggable="false" src="static/img/rq1_results.png" style="width: 30%" class="center" alt="results rq1">
+                    <figcaption>
+                        <strong>Figure 2:</strong> Results of experiments for RQ1 of models trained trained with different instruct-tuning language mixes that include from 7 to 100 languages.
+                    </figcaption>
+                </figure>
+            </d-figure>
+
+                <p class="text">
+                    <strong>Takeaway:</strong>
+                    We see major benefits for mid- to low-resource languages when training with 100 languages and find only minimal negative effects for high-resource languages.
+                    Hence, we use the L100 setup in subsequent experiments.
+                </p>
+            </div>
+
+                        <div id="sec:exploration:rq2" class="sub-section">
+                <h2 class="text">RQ2: Language Distribution in Instruction-Tuning</h2>
+
+                <p class="text">
+We now analyze how much of the training data should be multilingual.
+On the one hand, intuitively, increasing the non-English portion of the training data budget could then lead to further gains.
+On the other hand, the gains from more multilingual training are, at some point, likely to be offset by the fact that we are adding noisy (MT-obtained) data at the expense of clean (English) data.
+                </p>
+
+                <p class="text">
+                    <strong>Setup:</strong>
+                As in RQ1, we train the model with the instruct-tuning data (L100 setup).
+                We vary now just the amount of data that is kept in English (while the rest is translated to the other languages).
+                We consider 1%, 10%, 25%, 50%, 75%, and 90% English data.
+                </p>
+
+                <p class="text">
+                    <strong>Results:</strong>
+                    The peak performance for all tasks and language tiers is achieved with 25-75% English.
+                    Some tasks benefit from more multilingual data, and vice versa, some tasks benefit from more data kept in English.
+                    However, the extremes with mostly English (90%) or mostly multilingual (1-10% English) data are, in general, not ideal.
+                </p>
+
+
+                <d-figure id="fig:rq2">
+                <figure>
+                    <img data-zoomable="" draggable="false" src="static/img/rq2_results.png" style="width: 30%" class="center" alt="results rq2">
+                    <figcaption>
+                        <strong>Figure 3:</strong> Results of experiments for RQ2 of models trained with different instruct-tuning language mixes (100 languages but different ratio of English to others).
+                    </figcaption>
+                </figure>
+            </d-figure>
+
+                <p class="text">
+                    <strong>Takeaway:</strong>
+                    In practice, training with 25% to 50% multilingual data seems to yield strong (or even the best) results while keeping translation efforts low.
+                    We use 50% English in subsequent experiments because it produced the overall most balanced results.
+                </p>
+            </div>
+
+        </div>
+
+                        <div id="sec:exploration:rq3" class="sub-section">
+                <h2 class="text">RQ3: Language Distribution in Pre-Training</h2>
+
+                <p class="text">
+Pre-training with image-caption pairs improves LVLM performance.
+We therefore, after identifying an effective distribution of instruction-tuning data, next explore the effect of different distributions of pre-training data across languages.
+Specifically, we test if balancing out the English and multilingual portions delivers better performance than unbalanced distributions, that assign more training budget to English or the multilingual mix, respectively.
+                </p>
+
+                <p class="text">
+                    <strong>Setup:</strong>
+                    We fix the instruction-tuning mix for all models (L100, 50% English) and only change the pre-training data.
+                    Here, we consider keeping 1%, 50%, and 100% of the data in English and translating the rest to the remaining 99 languages.
+                </p>
+
+                <p class="text">
+                    <strong>Results:</strong>
+                    English-only pre-training primarily helps in English though there is at least no negative effect for other languages.
+                    Multilingual pre-training can greatly improve the model performance even in English.
+                    This still hold for the highly multilingual mix with just 1% English.
+                    Nevertheless, the benefits with 99% multilingual are minimal compared to 50%.
+                </p>
+
+
+                <d-figure id="fig:rq3">
+                <figure>
+                    <img data-zoomable="" draggable="false" src="static/img/rq3_results.png" style="width: 40%" class="center" alt="results rq3">
+                    <figcaption>
+                        <strong>Figure 4:</strong> Results of experiments for RQ3 of models trained with different pre-training language mixes (100 languages but different ratio of English to others) and identical instruct-tuning data.
+                    </figcaption>
+                </figure>
+            </d-figure>
+
+                <p class="text">
+                    <strong>Takeaway:</strong>
+                    Multilingual pre-training can greatly improve performance.
+                    In practice, benefits seem to saturate after 50% multilingual data, so we use this setup in subsequent experiments to keep translation efforts lower.
+                </p>
+            </div>
+
+        </div>
+
+                        <div id="sec:exploration:rq4" class="sub-section">
+                <h2 class="text">RQ4: Improving on Multilingual Text-in-Image Tasks</h2>
+
+                <p class="text">
+                    Finally, we focus on the models' multilingual understanding of text in images and how to improve it.
+                    Unlike tasks based on natural images, text-in-image tasks cannot be translated trivially from English:
+                    even if the prompt and output text are translated, the text in the image remains in English.
+                    Because of this, we test how synthetic multilingual OCR data, which can be generated at scale in any number of languages, can help improve performance.
+                </p>
+
+                <p class="text">
+                    <strong>Training Setup:</strong>
+                    We generate synthetic OCR data using <a href="https://github.com/clovaai/donut/tree/master/synthdog" target="_blank">Synthdog</a>.
+                    We generate 500k samples for pre-training and use 50k of those also during instruction-tuning.
+
+                    We consider the following setups: 100%, 50%, and 1% English (and the remainder uniformly spread over the other languages).
+                    Additionally, we consider a <i>Latin-down</i> setup that halves the samples for all Latin-script languages (to 2.5k from 5k as in 1% English) and doubles them for all other scripts (to 10k each).
+                    Importantly, the image encoder is now <strong>unfrozen</strong> and trained along with the rest of the model.
+
+                    Other pre-training and instruct-tuning data uses the L100 50% English setup.
+                </p>
+
+                <p class="text">
+                    <strong>Evaluation with SMPQA:</strong>
+                    Multilingual text-in-image evaluation data is limited.
+                    To this end, we propose SMPQA (Synthetic Multilingual Plot QA) to allow for evaluation in different languages.
+                    SMPQA generates synthetic plots in diverse languages (here: 5 Latin-script languages of different resource tiers, and 6 major non-Latin-script languages)
+                    with corresponding questions.
+                    There are two sub-task: <i>grounding</i> text given in the input prompt to the image for yes/no questions and <i>reading</i> text from the image.
+                </p>
+
+            <d-figure id="fig:rq3">
+                <figure>
+                    <img data-zoomable="" draggable="false" src="static/img/smpqa_example.png" style="width: 40%" class="center" alt="smpqa example">
+                    <figcaption>
+                        <strong>Figure 5:</strong> Example of SMPQA with questions for the grounding and reading sub-tasks.
+                    </figcaption>
+                </figure>
+            </d-figure>
+
+                <p class="text">
+                    <strong>Results:</strong> We make several observations:
+                <ul class="text">
+                    <li><strong>Unfreezing Image Encoder:</strong> This is necessary for all scripts to get optimal performance.</li>
+                    <li><strong>English Results:</strong> All setups produce similar results for English. Highly multilingual OCR data does not seem detrimental for English.</li>
+                    <li><strong>Latin script:</strong> Multilingual synthetic OCR data can greatly improve results for all resource tiers. More data is better.</li>
+                    <li><strong>Non-Latin script:</strong> There is a major performance gap to Latin scripts even when increasing the amount of data.
+                        We do see improvements with more data but, for example, Thai and Chinese are still near-random in the best setup.</li>
+                </ul>
+                </p>
+
+            <d-figure id="fig:rq3">
+                <figure>
+                    <img data-zoomable="" draggable="false" src="static/img/rq4_results.png" style="width: 40%" class="center" alt="results rq4">
+                    <figcaption>
+                        <strong>Figure 6:</strong> Results of experiments for RQ4 of models trained with additional synthetic OCR data on SMPQA for English, Latin-script languages, and languages with other scripts.
+                    </figcaption>
+                </figure>
+            </d-figure>
+
+                <p class="text">
+                    <strong>Takeaway:</strong>
+To improve multilingual capabilities for text-in-image tasks, large-scale multilingual OCR data is key.
+                    Synthetic OCR data, as generated by us, works well, but especially languages using other scripts might need magnitudes more data to function.
+                </p>
+            </div>
+
+        </div>
+
+
+        <div id='centurio' class="model-block">
+            <div id="sec:centurio" class="sub-section">
+                <h1 class="text">Centurio - Applying Lessons Learned</h1>
+
+
+                <p class="text">
+                    We show the efficacy of our takeaways in practice by training Centurio, massively multilingual LVLMs with state-of-the-art performance.
+                    We make the following design choices for the models:
+                </p>
+                <ul class="text">
+                    <li><strong>LLM:</strong> After benchmarking different 7-9B parameter LLMs, we find that Aya-Expanse and Qwen 2.5 give the overall best results.</li>
+                    <li><strong>Image Encoding:</strong> We use the image tiling approach by <d-cite key="shi_when_2024"></d-cite> to improve performance for OCR tasks while keeping the number of tokens the same.</li>
+                    <li><strong>Training Data:</strong> We scale up both the pre-training and instruction-tuning.
+                        For pre-training, we use 2M captions along with the 1.16M synthetic OCR samples from RQ4.
+                        For instruction-tuning, we include additional tasks from the Cambrian collection along with text-only instruct data for 2.5M total samples.
+                        The data is translated following our L100 50% English setup, which we identified as the overall best in our analysis.
+                    </li>
+                </ul>
+
+                <p class="text">
+                    <strong>Results:</strong>
+                    On average, Centurio achieves the best results across 14 tasks on their multilingual portions and additionally performs strongly on English.
+                    These results prove the effectiveness of our training composition: we are able to retain high English performances while maximizing the models' multilingual capabilities.
+When analyzing these results grouped by language tier, we find that our models shine in the low-resource tiers T1 and T2, with competitive results for higher-resource languages.
+<br>
+Only for text-heavy tasks (primarily MTVQA and SMPQA), Centurio falls behind. 
+While we show the importance of multilingual OCR training - Centurio succeeds at the SMPQA reading task in more languages than, for example, Pangea - the limited input resolution and magnitudes less OCR data compared to Qwen2-VL and others result in comparably poor performance.
+                </p>
+
+            <d-figure id="fig:centurio">
+                <figure>
+                    <img data-zoomable="" draggable="false" src="static/img/centurio_results.png" style="width: 70%" class="center" alt="centurio results">
+                    <figcaption>
+                        <strong>Figure 7:</strong> Comparison between Centurio and other open-weight LVLMs over 14 tasks covering 56 languages.
+                        Scores are accuracy (CIDEr for XM3600). en & mul are the English and averaged multilingual results.
+                        XM3600 fid. is the language fidelity over all languages; SMPQA G. & N are Grounding and Naming.
+                        *: supports only single-image input.
+                        AVG.: average over all tasks.
+                    </figcaption>
+                </figure>
+            </d-figure>
+            </div>
+        </div>
+
+
+
+        <div id="acknowledgement" style="position: relative; margin-top: 40px; margin-bottom: 0px;">
+            <h2 class="text" style="margin-top:0px; margin-bottom:10px">Acknowledgement</h2>
+            <p class="text">
+                The authors would like to thank the Pangea team for their <a href="https://neulab.github.io/Pangea/" target="_blank">project webpage template</a>.
+            </p>
+        </div>
+
+        </d-article>
+        <d-appendix>
+            <h3>BibTeX</h3>
+            <p class="bibtex">
+@article{centurio2025, <br>
+  title={TODO},  <br>
+  author={TODO}, <br>
+  year={2024}, <br>
+  journal={arXiv preprint arXiv:TODO}, <br>
+  url={TODO} <br>
+}
+            </p>
+
+            <d-footnote-list></d-footnote-list>
+            <d-citation-list></d-citation-list>
+        </d-appendix>   
+        <!-- bibliography will be inlined during Distill pipeline's pre-rendering -->
+        <d-bibliography src="bibliography.bib"></d-bibliography>
+        <script src="./static/js/nav-bar.js"></script>
+    </body>
+</html>
