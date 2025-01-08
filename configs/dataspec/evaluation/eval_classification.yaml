@@ -1,0 +1,33 @@
+prepare:
+  batch:
+      _partial_: True
+      _target_: src.tasks.vllm.evaluation.set_generation_mode
+      mode: generate
+      num_beams: 1
+      max_new_tokens: 10
+      min_new_tokens: 1
+      length_penalty: -1
+  outputs:
+      _target_: src.tasks.vllm.evaluation.OutputGenerate
+      tokenizer: ${run.llm}
+  step_outputs: null
+
+step_outputs:
+    outputs:
+      - "caption"
+    batch:
+      - "image_id"
+      - "text_label"
+
+metrics:
+    acc:
+      metric:
+        _partial_: True
+        _target_: src.tasks.vllm.evaluation.classification_evaluation
+        vqa_process: False
+        print_examples: 10
+      compute_on: "epoch_end"
+      kwargs:
+        image_ids: "outputs.image_id"
+        text_labels: "outputs.text_label"
+        captions: "outputs.caption"

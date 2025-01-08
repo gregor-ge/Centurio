@@ -1,0 +1,15 @@
+defaults:
+  - /dataspec@mmmu_en_dev: mmmu
+  - /dataspec@mmmu_en_validation: mmmu
+
+mmmu_en_dev:
+  dataset:
+    split: train
+    path: json
+    data_files: ${run.train_data}/mmmu/mmmu_en_dev.json
+
+mmmu_en_validation:
+  dataset:
+    split: train
+    path: json
+    data_files: ${run.train_data}/mmmu/mmmu_en_validation.json

@@ -1,0 +1,50 @@
+defaults:
+#  - /dataspec@xgqa_bn_test: xgqa
+  - /dataspec@xgqa_de_test: xgqa
+  - /dataspec@xgqa_en_test: xgqa
+#  - /dataspec@xgqa_id_test: xgqa
+#  - /dataspec@xgqa_ko_test: xgqa
+#  - /dataspec@xgqa_pt_test: xgqa
+#  - /dataspec@xgqa_ru_test: xgqa
+#  - /dataspec@xgqa_zh_test: xgqa
+
+#xgqa_bn_test:
+#  dataset:
+#      split: train
+#      path: json
+#      data_files: ${run.train_data}/xgqa/xgqa_input_test_bn.json
+xgqa_de_test:
+  dataset:
+      split: train
+      path: json
+      data_files: ${run.train_data}/xgqa/xgqa_input_test_de.json
+xgqa_en_test:
+  dataset:
+      split: train
+      path: json
+      data_files: ${run.train_data}/xgqa/xgqa_input_test_en.json
+#xgqa_id_test:
+#  dataset:
+#      split: train
+#      path: json
+#      data_files: ${run.train_data}/xgqa/xgqa_input_test_id.json
+#xgqa_ko_test:
+#  dataset:
+#      split: train
+#      path: json
+#      data_files: ${run.train_data}/xgqa/xgqa_input_test_ko.json
+#xgqa_pt_test:
+#  dataset:
+#      split: train
+#      path: json
+#      data_files: ${run.train_data}/xgqa/xgqa_input_test_pt.json
+#xgqa_ru_test:
+#  dataset:
+#      split: train
+#      path: json
+#      data_files: ${run.train_data}/xgqa/xgqa_input_test_ru.json
+#xgqa_zh_test:
+#  dataset:
+#      split: train
+#      path: json
+#      data_files: ${run.train_data}/xgqa/xgqa_input_test_zh.json

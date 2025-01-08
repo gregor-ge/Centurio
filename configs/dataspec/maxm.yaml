@@ -1,0 +1,19 @@
+defaults:
+  - default
+  - preprocessing: preprocess
+  - evaluation: eval_vqa_classification
+
+
+evaluation:
+  metrics:
+    vqa_acc:
+      metric:
+        _target_: src.tasks.vllm.evaluation.vqa_maxm_classification_evaluation
+        vqa_process: False
+
+preprocessing:
+  method:
+    set_transform:
+      transform:
+        image_root: ${run.xm3600_image_root}
+        extension: ""

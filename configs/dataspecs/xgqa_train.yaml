@@ -1,0 +1,9 @@
+defaults:
+  - /dataspec@xgqa: xgqa
+  - override /dataspec/dataloader@xgqa.dataloader: train
+
+xgqa:
+  dataset:
+    split: train
+    path: json
+    data_files: ${run.train_data}/xgqa/xgqa_input_train.json

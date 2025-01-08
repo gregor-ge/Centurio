@@ -1,0 +1,17 @@
+defaults:
+  - default
+  - preprocessing: preprocess
+  - evaluation: eval_classification
+
+preprocessing:
+  method:
+    map:
+      function:
+        template: 'Given the two images <image_placeholder><image_placeholder>, is it correct to say "{}"? Answer yes or no.'
+        target2str: { "True": "yes", "False": "no" }
+    set_transform:
+      transform:
+#        _target_: src.tasks.vllm.data.LoadTransformImageMarvl
+#        processor: ${run.blip_model}
+        image_root: ${run.marvl_img_root}
+        extension: ""

@@ -1,0 +1,9 @@
+defaults:
+  - /dataspec@nlvr: marvl
+  - override /dataspec/dataloader@marvl.dataloader: train
+
+nlvr:
+  dataset:
+    split: train
+    path: json
+    data_files: ${run.train_data}/marvl/nlvr_train_en.json

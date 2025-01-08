@@ -1,0 +1,244 @@
+defaults:
+  - /dataspec@smpqa_en_name_test: smpqa
+  - /dataspec@smpqa_en_ground_test: smpqa
+  - /dataspec@smpqa_zu_name_test: smpqa
+  - /dataspec@smpqa_zu_ground_test: smpqa
+  - /dataspec@smpqa_id_name_test: smpqa
+  - /dataspec@smpqa_id_ground_test: smpqa
+  - /dataspec@smpqa_it_name_test: smpqa
+  - /dataspec@smpqa_it_ground_test: smpqa
+  - /dataspec@smpqa_de_name_test: smpqa
+  - /dataspec@smpqa_de_ground_test: smpqa
+  - /dataspec@smpqa_th_name_test: smpqa
+  - /dataspec@smpqa_th_ground_test: smpqa
+  - /dataspec@smpqa_ar_name_test: smpqa
+  - /dataspec@smpqa_ar_ground_test: smpqa
+  - /dataspec@smpqa_ko_name_test: smpqa
+  - /dataspec@smpqa_ko_ground_test: smpqa
+  - /dataspec@smpqa_zh_name_test: smpqa
+  - /dataspec@smpqa_zh_ground_test: smpqa
+  - /dataspec@smpqa_ru_name_test: smpqa
+  - /dataspec@smpqa_ru_ground_test: smpqa
+  - /dataspec@smpqa_hi_name_test: smpqa
+  - /dataspec@smpqa_hi_ground_test: smpqa
+
+smpqa_en_name_test:
+  dataset:
+      split: train
+      path: json
+      data_files: ${run.train_data}/smpqa/en_name.json
+  evaluation:
+    metrics:
+      acc:
+        metric:
+          dump_results: "${hydra:runtime.output_dir}/smpqa_en_name.json"
+smpqa_en_ground_test:
+  dataset:
+      split: train
+      path: json
+      data_files: ${run.train_data}/smpqa/en_ground.json
+  evaluation:
+    metrics:
+      acc:
+        metric:
+          dump_results: "${hydra:runtime.output_dir}/smpqa_en_ground.json"
+smpqa_zu_name_test:
+  dataset:
+      split: train
+      path: json
+      data_files: ${run.train_data}/smpqa/zu_name.json
+  evaluation:
+    metrics:
+      acc:
+        metric:
+          dump_results: "${hydra:runtime.output_dir}/smpqa_zu_name.json"
+smpqa_zu_ground_test:
+  dataset:
+      split: train
+      path: json
+      data_files: ${run.train_data}/smpqa/zu_ground.json
+  evaluation:
+    metrics:
+      acc:
+        metric:
+          dump_results: "${hydra:runtime.output_dir}/smpqa_zu_ground.json"
+smpqa_id_name_test:
+  dataset:
+      split: train
+      path: json
+      data_files: ${run.train_data}/smpqa/id_name.json
+  evaluation:
+    metrics:
+      acc:
+        metric:
+          dump_results: "${hydra:runtime.output_dir}/smpqa_id_name.json"
+smpqa_id_ground_test:
+  dataset:
+      split: train
+      path: json
+      data_files: ${run.train_data}/smpqa/id_ground.json
+  evaluation:
+    metrics:
+      acc:
+        metric:
+          dump_results: "${hydra:runtime.output_dir}/smpqa_id_ground.json"
+smpqa_it_name_test:
+  dataset:
+      split: train
+      path: json
+      data_files: ${run.train_data}/smpqa/it_name.json
+  evaluation:
+    metrics:
+      acc:
+        metric:
+          dump_results: "${hydra:runtime.output_dir}/smpqa_it_name.json"
+smpqa_it_ground_test:
+  dataset:
+      split: train
+      path: json
+      data_files: ${run.train_data}/smpqa/it_ground.json
+  evaluation:
+    metrics:
+      acc:
+        metric:
+          dump_results: "${hydra:runtime.output_dir}/smpqa_it_ground.json"
+smpqa_de_name_test:
+  dataset:
+      split: train
+      path: json
+      data_files: ${run.train_data}/smpqa/de_name.json
+  evaluation:
+    metrics:
+      acc:
+        metric:
+          dump_results: "${hydra:runtime.output_dir}/smpqa_de_name.json"
+smpqa_de_ground_test:
+  dataset:
+      split: train
+      path: json
+      data_files: ${run.train_data}/smpqa/de_ground.json
+  evaluation:
+    metrics:
+      acc:
+        metric:
+          dump_results: "${hydra:runtime.output_dir}/smpqa_de_ground.json"
+smpqa_th_name_test:
+  dataset:
+      split: train
+      path: json
+      data_files: ${run.train_data}/smpqa/th_name.json
+  evaluation:
+    metrics:
+      acc:
+        metric:
+          dump_results: "${hydra:runtime.output_dir}/smpqa_th_name.json"
+smpqa_th_ground_test:
+  dataset:
+      split: train
+      path: json
+      data_files: ${run.train_data}/smpqa/th_ground.json
+  evaluation:
+    metrics:
+      acc:
+        metric:
+          dump_results: "${hydra:runtime.output_dir}/smpqa_th_ground.json"
+smpqa_ar_name_test:
+  dataset:
+      split: train
+      path: json
+      data_files: ${run.train_data}/smpqa/ar_name.json
+  evaluation:
+    metrics:
+      acc:
+        metric:
+          dump_results: "${hydra:runtime.output_dir}/smpqa_ar_name.json"
+smpqa_ar_ground_test:
+  dataset:
+      split: train
+      path: json
+      data_files: ${run.train_data}/smpqa/ar_ground.json
+  evaluation:
+    metrics:
+      acc:
+        metric:
+          dump_results: "${hydra:runtime.output_dir}/smpqa_ar_ground.json"
+smpqa_ko_name_test:
+  dataset:
+      split: train
+      path: json
+      data_files: ${run.train_data}/smpqa/ko_name.json
+  evaluation:
+    metrics:
+      acc:
+        metric:
+          dump_results: "${hydra:runtime.output_dir}/smpqa_ko_name.json"
+smpqa_ko_ground_test:
+  dataset:
+      split: train
+      path: json
+      data_files: ${run.train_data}/smpqa/ko_ground.json
+  evaluation:
+    metrics:
+      acc:
+        metric:
+          dump_results: "${hydra:runtime.output_dir}/smpqa_ko_ground.json"
+smpqa_zh_name_test:
+  dataset:
+      split: train
+      path: json
+      data_files: ${run.train_data}/smpqa/zh_name.json
+  evaluation:
+    metrics:
+      acc:
+        metric:
+          dump_results: "${hydra:runtime.output_dir}/smpqa_zh_name.json"
+smpqa_zh_ground_test:
+  dataset:
+      split: train
+      path: json
+      data_files: ${run.train_data}/smpqa/zh_ground.json
+  evaluation:
+    metrics:
+      acc:
+        metric:
+          dump_results: "${hydra:runtime.output_dir}/smpqa_zh_ground.json"
+smpqa_ru_name_test:
+  dataset:
+      split: train
+      path: json
+      data_files: ${run.train_data}/smpqa/ru_name.json
+  evaluation:
+    metrics:
+      acc:
+        metric:
+          dump_results: "${hydra:runtime.output_dir}/smpqa_ru_name.json"
+smpqa_ru_ground_test:
+  dataset:
+      split: train
+      path: json
+      data_files: ${run.train_data}/smpqa/ru_ground.json
+  evaluation:
+    metrics:
+      acc:
+        metric:
+          dump_results: "${hydra:runtime.output_dir}/smpqa_ru_ground.json"
+smpqa_hi_name_test:
+  dataset:
+      split: train
+      path: json
+      data_files: ${run.train_data}/smpqa/hi_name.json
+  evaluation:
+    metrics:
+      acc:
+        metric:
+          dump_results: "${hydra:runtime.output_dir}/smpqa_hi_name.json"
+smpqa_hi_ground_test:
+  dataset:
+      split: train
+      path: json
+      data_files: ${run.train_data}/smpqa/hi_ground.json
+  evaluation:
+    metrics:
+      acc:
+        metric:
+          dump_results: "${hydra:runtime.output_dir}/smpqa_hi_ground.json"

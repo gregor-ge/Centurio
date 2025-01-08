@@ -1,0 +1,44 @@
+defaults:
+  - /dataspec@m3exam_english: m3exam_cycle
+  - /dataspec@m3exam_afrikaans: m3exam_cycle
+  - /dataspec@m3exam_italian: m3exam_cycle
+  - /dataspec@m3exam_portuguese: m3exam_cycle
+  - /dataspec@m3exam_thai: m3exam_cycle
+  - /dataspec@m3exam_chinese: m3exam_cycle
+  - /dataspec@m3exam_vietnamese: m3exam_cycle
+
+m3exam_english:
+  dataset:
+      split: train
+      path: json
+      data_files: ${run.train_data}/m3exam/m3exam-cycle-english.json
+m3exam_afrikaans:
+  dataset:
+      split: train
+      path: json
+      data_files: ${run.train_data}/m3exam/m3exam-cycle-afrikaans.json
+m3exam_italian:
+  dataset:
+      split: train
+      path: json
+      data_files: ${run.train_data}/m3exam/m3exam-cycle-italian.json
+m3exam_portuguese:
+  dataset:
+      split: train
+      path: json
+      data_files: ${run.train_data}/m3exam/m3exam-cycle-portuguese.json
+m3exam_thai:
+  dataset:
+      split: train
+      path: json
+      data_files: ${run.train_data}/m3exam/m3exam-cycle-thai.json
+m3exam_vietnamese:
+  dataset:
+      split: train
+      path: json
+      data_files: ${run.train_data}/m3exam/m3exam-cycle-vietnamese.json
+m3exam_chinese:
+  dataset:
+      split: train
+      path: json
+      data_files: ${run.train_data}/m3exam/m3exam-cycle-chinese.json

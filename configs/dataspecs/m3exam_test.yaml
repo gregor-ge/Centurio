@@ -1,0 +1,79 @@
+defaults:
+  - /dataspec@m3exam_english: m3exam
+  - /dataspec@m3exam_afrikaans: m3exam
+  - /dataspec@m3exam_italian: m3exam
+  - /dataspec@m3exam_portuguese: m3exam
+  - /dataspec@m3exam_thai: m3exam
+  - /dataspec@m3exam_chinese: m3exam
+  - /dataspec@m3exam_vietnamese: m3exam
+
+m3exam_english:
+  dataset:
+      split: train
+      path: json
+      data_files: ${run.train_data}/m3exam/m3exam-english.json
+  evaluation:
+    metrics:
+      acc:
+        metric:
+          dump_results: "${hydra:runtime.output_dir}/m3exam_english.json"
+m3exam_afrikaans:
+  dataset:
+      split: train
+      path: json
+      data_files: ${run.train_data}/m3exam/m3exam-afrikaans.json
+  evaluation:
+    metrics:
+      acc:
+        metric:
+          dump_results: "${hydra:runtime.output_dir}/m3exam_afrikaans.json"
+m3exam_italian:
+  dataset:
+      split: train
+      path: json
+      data_files: ${run.train_data}/m3exam/m3exam-italian.json
+  evaluation:
+    metrics:
+      acc:
+        metric:
+          dump_results: "${hydra:runtime.output_dir}/m3exam_italian.json"
+m3exam_portuguese:
+  dataset:
+      split: train
+      path: json
+      data_files: ${run.train_data}/m3exam/m3exam-portuguese.json
+  evaluation:
+    metrics:
+      acc:
+        metric:
+          dump_results: "${hydra:runtime.output_dir}/m3exam_portuguese.json"
+m3exam_thai:
+  dataset:
+      split: train
+      path: json
+      data_files: ${run.train_data}/m3exam/m3exam-thai.json
+  evaluation:
+    metrics:
+      acc:
+        metric:
+          dump_results: "${hydra:runtime.output_dir}/m3exam_thai.json"
+m3exam_vietnamese:
+  dataset:
+      split: train
+      path: json
+      data_files: ${run.train_data}/m3exam/m3exam-vietnamese.json
+  evaluation:
+    metrics:
+      acc:
+        metric:
+          dump_results: "${hydra:runtime.output_dir}/m3exam_vietnamese.json"
+m3exam_chinese:
+  dataset:
+      split: train
+      path: json
+      data_files: ${run.train_data}/m3exam/m3exam-chinese.json
+  evaluation:
+    metrics:
+      acc:
+        metric:
+          dump_results: "${hydra:runtime.output_dir}/m3exam_chinese.json"

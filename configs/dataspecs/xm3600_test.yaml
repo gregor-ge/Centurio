@@ -1,0 +1,397 @@
+defaults:
+  - /dataspec@xm3600_fa: xm3600
+  - /dataspec@xm3600_te: xm3600
+  - /dataspec@xm3600_ko: xm3600
+  - /dataspec@xm3600_fi: xm3600
+  - /dataspec@xm3600_fil: xm3600
+  - /dataspec@xm3600_mi: xm3600
+  - /dataspec@xm3600_hu: xm3600
+  - /dataspec@xm3600_id: xm3600
+  - /dataspec@xm3600_hr: xm3600
+  - /dataspec@xm3600_fr: xm3600
+  - /dataspec@xm3600_quz: xm3600
+  - /dataspec@xm3600_sv: xm3600
+  - /dataspec@xm3600_zh: xm3600
+  - /dataspec@xm3600_sw: xm3600
+  - /dataspec@xm3600_no: xm3600
+  - /dataspec@xm3600_vi: xm3600
+  - /dataspec@xm3600_da: xm3600
+  - /dataspec@xm3600_ja: xm3600
+  - /dataspec@xm3600_nl: xm3600
+  - /dataspec@xm3600_he: xm3600
+  - /dataspec@xm3600_th: xm3600
+  - /dataspec@xm3600_ru: xm3600
+  - /dataspec@xm3600_it: xm3600
+  - /dataspec@xm3600_hi: xm3600
+  - /dataspec@xm3600_uk: xm3600
+  - /dataspec@xm3600_de: xm3600
+  - /dataspec@xm3600_pt: xm3600
+  - /dataspec@xm3600_tr: xm3600
+  - /dataspec@xm3600_cs: xm3600
+  - /dataspec@xm3600_pl: xm3600
+  - /dataspec@xm3600_bn: xm3600
+  - /dataspec@xm3600_ar: xm3600
+  - /dataspec@xm3600_ro: xm3600
+  - /dataspec@xm3600_en: xm3600
+  - /dataspec@xm3600_es: xm3600
+  - /dataspec@xm3600_el: xm3600
+xm3600_en:
+  dataset:
+    split: train[:512]
+    path: json
+    data_files: ${run.train_data}/xm3600/xm3600_en.json
+  evaluation:
+    metrics:
+      caption_metrics:
+        metric:
+          dump_results: "${hydra:runtime.output_dir}/xm3600_en.json"
+xm3600_fa:
+  dataset:
+    split: train[:512]
+    path: json
+    data_files: ${run.train_data}/xm3600/xm3600_fa.json
+  evaluation:
+    metrics:
+      caption_metrics:
+        metric:
+          dump_results: "${hydra:runtime.output_dir}/xm3600_fa.json"
+xm3600_te:
+  dataset:
+    split: train[:512]
+    path: json
+    data_files: ${run.train_data}/xm3600/xm3600_te.json
+  evaluation:
+    metrics:
+      caption_metrics:
+        metric:
+          dump_results: "${hydra:runtime.output_dir}/xm3600_te.json"
+xm3600_ko:
+  dataset:
+    split: train[:512]
+    path: json
+    data_files: ${run.train_data}/xm3600/xm3600_ko.json
+  evaluation:
+    metrics:
+      caption_metrics:
+        metric:
+          dump_results: "${hydra:runtime.output_dir}/xm3600_ko.json"
+xm3600_fi:
+  dataset:
+    split: train[:512]
+    path: json
+    data_files: ${run.train_data}/xm3600/xm3600_fi.json
+  evaluation:
+    metrics:
+      caption_metrics:
+        metric:
+          dump_results: "${hydra:runtime.output_dir}/xm3600_fi.json"
+xm3600_fil:
+  dataset:
+    split: train[:512]
+    path: json
+    data_files: ${run.train_data}/xm3600/xm3600_fil.json
+  evaluation:
+    metrics:
+      caption_metrics:
+        metric:
+          dump_results: "${hydra:runtime.output_dir}/xm3600_fil.json"
+xm3600_mi:
+  dataset:
+    split: train[:512]
+    path: json
+    data_files: ${run.train_data}/xm3600/xm3600_mi.json
+  evaluation:
+    metrics:
+      caption_metrics:
+        metric:
+          dump_results: "${hydra:runtime.output_dir}/xm3600_mi.json"
+xm3600_hu:
+  dataset:
+    split: train[:512]
+    path: json
+    data_files: ${run.train_data}/xm3600/xm3600_hu.json
+  evaluation:
+    metrics:
+      caption_metrics:
+        metric:
+          dump_results: "${hydra:runtime.output_dir}/xm3600_hu.json"
+xm3600_id:
+  dataset:
+    split: train[:512]
+    path: json
+    data_files: ${run.train_data}/xm3600/xm3600_id.json
+  evaluation:
+    metrics:
+      caption_metrics:
+        metric:
+          dump_results: "${hydra:runtime.output_dir}/xm3600_id.json"
+xm3600_hr:
+  dataset:
+    split: train[:512]
+    path: json
+    data_files: ${run.train_data}/xm3600/xm3600_hr.json
+  evaluation:
+    metrics:
+      caption_metrics:
+        metric:
+          dump_results: "${hydra:runtime.output_dir}/xm3600_hr.json"
+xm3600_fr:
+  dataset:
+    split: train[:512]
+    path: json
+    data_files: ${run.train_data}/xm3600/xm3600_fr.json
+  evaluation:
+    metrics:
+      caption_metrics:
+        metric:
+          dump_results: "${hydra:runtime.output_dir}/xm3600_fr.json"
+xm3600_quz:
+  dataset:
+    split: train[:512]
+    path: json
+    data_files: ${run.train_data}/xm3600/xm3600_quz.json
+  evaluation:
+    metrics:
+      caption_metrics:
+        metric:
+          dump_results: "${hydra:runtime.output_dir}/xm3600_quz.json"
+xm3600_sv:
+  dataset:
+    split: train[:512]
+    path: json
+    data_files: ${run.train_data}/xm3600/xm3600_sv.json
+  evaluation:
+    metrics:
+      caption_metrics:
+        metric:
+          dump_results: "${hydra:runtime.output_dir}/xm3600_sv.json"
+xm3600_zh:
+  dataset:
+    split: train[:512]
+    path: json
+    data_files: ${run.train_data}/xm3600/xm3600_zh.json
+  evaluation:
+    metrics:
+      caption_metrics:
+        metric:
+          dump_results: "${hydra:runtime.output_dir}/xm3600_zh.json"
+xm3600_sw:
+  dataset:
+    split: train[:512]
+    path: json
+    data_files: ${run.train_data}/xm3600/xm3600_sw.json
+  evaluation:
+    metrics:
+      caption_metrics:
+        metric:
+          dump_results: "${hydra:runtime.output_dir}/xm3600_sw.json"
+xm3600_no:
+  dataset:
+    split: train[:512]
+    path: json
+    data_files: ${run.train_data}/xm3600/xm3600_no.json
+  evaluation:
+    metrics:
+      caption_metrics:
+        metric:
+          dump_results: "${hydra:runtime.output_dir}/xm3600_no.json"
+xm3600_vi:
+  dataset:
+    split: train[:512]
+    path: json
+    data_files: ${run.train_data}/xm3600/xm3600_vi.json
+  evaluation:
+    metrics:
+      caption_metrics:
+        metric:
+          dump_results: "${hydra:runtime.output_dir}/xm3600_vi.json"
+xm3600_da:
+  dataset:
+    split: train[:512]
+    path: json
+    data_files: ${run.train_data}/xm3600/xm3600_da.json
+  evaluation:
+    metrics:
+      caption_metrics:
+        metric:
+          dump_results: "${hydra:runtime.output_dir}/xm3600_da.json"
+xm3600_ja:
+  dataset:
+    split: train[:512]
+    path: json
+    data_files: ${run.train_data}/xm3600/xm3600_ja.json
+  evaluation:
+    metrics:
+      caption_metrics:
+        metric:
+          dump_results: "${hydra:runtime.output_dir}/xm3600_ja.json"
+xm3600_nl:
+  dataset:
+    split: train[:512]
+    path: json
+    data_files: ${run.train_data}/xm3600/xm3600_nl.json
+  evaluation:
+    metrics:
+      caption_metrics:
+        metric:
+          dump_results: "${hydra:runtime.output_dir}/xm3600_nl.json"
+xm3600_he:
+  dataset:
+    split: train[:512]
+    path: json
+    data_files: ${run.train_data}/xm3600/xm3600_he.json
+  evaluation:
+    metrics:
+      caption_metrics:
+        metric:
+          dump_results: "${hydra:runtime.output_dir}/xm3600_he.json"
+xm3600_th:
+  dataset:
+    split: train[:512]
+    path: json
+    data_files: ${run.train_data}/xm3600/xm3600_th.json
+  evaluation:
+    metrics:
+      caption_metrics:
+        metric:
+          dump_results: "${hydra:runtime.output_dir}/xm3600_th.json"
+xm3600_ru:
+  dataset:
+    split: train[:512]
+    path: json
+    data_files: ${run.train_data}/xm3600/xm3600_ru.json
+  evaluation:
+    metrics:
+      caption_metrics:
+        metric:
+          dump_results: "${hydra:runtime.output_dir}/xm3600_ru.json"
+xm3600_it:
+  dataset:
+    split: train[:512]
+    path: json
+    data_files: ${run.train_data}/xm3600/xm3600_it.json
+  evaluation:
+    metrics:
+      caption_metrics:
+        metric:
+          dump_results: "${hydra:runtime.output_dir}/xm3600_it.json"
+xm3600_hi:
+  dataset:
+    split: train[:512]
+    path: json
+    data_files: ${run.train_data}/xm3600/xm3600_hi.json
+  evaluation:
+    metrics:
+      caption_metrics:
+        metric:
+          dump_results: "${hydra:runtime.output_dir}/xm3600_hi.json"
+xm3600_uk:
+  dataset:
+    split: train[:512]
+    path: json
+    data_files: ${run.train_data}/xm3600/xm3600_uk.json
+  evaluation:
+    metrics:
+      caption_metrics:
+        metric:
+          dump_results: "${hydra:runtime.output_dir}/xm3600_uk.json"
+xm3600_de:
+  dataset:
+    split: train[:512]
+    path: json
+    data_files: ${run.train_data}/xm3600/xm3600_de.json
+  evaluation:
+    metrics:
+      caption_metrics:
+        metric:
+          dump_results: "${hydra:runtime.output_dir}/xm3600_de.json"
+xm3600_pt:
+  dataset:
+    split: train[:512]
+    path: json
+    data_files: ${run.train_data}/xm3600/xm3600_pt.json
+  evaluation:
+    metrics:
+      caption_metrics:
+        metric:
+          dump_results: "${hydra:runtime.output_dir}/xm3600_pt.json"
+xm3600_tr:
+  dataset:
+    split: train[:512]
+    path: json
+    data_files: ${run.train_data}/xm3600/xm3600_tr.json
+  evaluation:
+    metrics:
+      caption_metrics:
+        metric:
+          dump_results: "${hydra:runtime.output_dir}/xm3600_tr.json"
+xm3600_cs:
+  dataset:
+    split: train[:512]
+    path: json
+    data_files: ${run.train_data}/xm3600/xm3600_cs.json
+  evaluation:
+    metrics:
+      caption_metrics:
+        metric:
+          dump_results: "${hydra:runtime.output_dir}/xm3600_cs.json"
+xm3600_pl:
+  dataset:
+    split: train[:512]
+    path: json
+    data_files: ${run.train_data}/xm3600/xm3600_pl.json
+  evaluation:
+    metrics:
+      caption_metrics:
+        metric:
+          dump_results: "${hydra:runtime.output_dir}/xm3600_pl.json"
+xm3600_bn:
+  dataset:
+    split: train[:512]
+    path: json
+    data_files: ${run.train_data}/xm3600/xm3600_bn.json
+  evaluation:
+    metrics:
+      caption_metrics:
+        metric:
+          dump_results: "${hydra:runtime.output_dir}/xm3600_bn.json"
+xm3600_ar:
+  dataset:
+    split: train[:512]
+    path: json
+    data_files: ${run.train_data}/xm3600/xm3600_ar.json
+  evaluation:
+    metrics:
+      caption_metrics:
+        metric:
+          dump_results: "${hydra:runtime.output_dir}/xm3600_ar.json"
+xm3600_ro:
+  dataset:
+    split: train[:512]
+    path: json
+    data_files: ${run.train_data}/xm3600/xm3600_ro.json
+  evaluation:
+    metrics:
+      caption_metrics:
+        metric:
+          dump_results: "${hydra:runtime.output_dir}/xm3600_ro.json"
+xm3600_es:
+  dataset:
+    split: train[:512]
+    path: json
+    data_files: ${run.train_data}/xm3600/xm3600_es.json
+  evaluation:
+    metrics:
+      caption_metrics:
+        metric:
+          dump_results: "${hydra:runtime.output_dir}/xm3600_es.json"
+xm3600_el:
+  dataset:
+    split: train[:512]
+    path: json
+    data_files: ${run.train_data}/xm3600/xm3600_el.json
+  evaluation:
+    metrics:
+      caption_metrics:
+        metric:
+          dump_results: "${hydra:runtime.output_dir}/xm3600_el.json"

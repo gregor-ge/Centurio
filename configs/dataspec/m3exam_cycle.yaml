@@ -1,0 +1,14 @@
+defaults:
+  - default
+  - preprocessing: preprocess
+  - evaluation: eval_mc_cycle
+
+preprocessing:
+  method:
+    map:
+      function:
+        template: "{}"
+    set_transform:
+      transform:
+        image_root: ${run.m3exam_image_root}
+        extension: ""

@@ -1,0 +1,32 @@
+defaults:
+#  - /dataspec@xvnli_ar_val: xvnli
+#  - /dataspec@xvnli_es_val: xvnli
+  - /dataspec@xvnli_fr_val: xvnli
+#  - /dataspec@xvnli_ru_val: xvnli
+  - /dataspec@xvnli_en_val: xvnli
+
+#xvnli_ar_val:
+#  dataset:
+#      split: train[:1800]
+#      path: json
+#      data_files: ${run.train_data}/xvnli/xvnli_input_val_ar.json
+#xvnli_es_val:
+#  dataset:
+#      split: train[:1800]
+#      path: json
+#      data_files: ${run.train_data}/xvnli/xvnli_input_val_es.json
+xvnli_fr_val:
+  dataset:
+      split: train[:1800]
+      path: json
+      data_files: ${run.train_data}/xvnli/xvnli_input_val_fr.json
+#xvnli_ru_val:
+#  dataset:
+#      split: train[:1800]
+#      path: json
+#      data_files: ${run.train_data}/xvnli/xvnli_input_val_ru.json
+xvnli_en_val:
+  dataset:
+      split: train[:1800]
+      path: json
+      data_files: ${run.train_data}/xvnli/xvnli_input_val_en.json

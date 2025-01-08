@@ -1,0 +1,15 @@
+defaults:
+  - default
+  - preprocessing: preprocess_lazy
+  - evaluation: eval_train # train
+
+preprocessing:
+  method:
+    set_transform:
+      transform:
+        image_process:
+          image_root:
+            - ${run.train_image_root}
+            - ${run.flickr_image_root}
+            - ${run.imagenet_image_root}
+          extension: ""

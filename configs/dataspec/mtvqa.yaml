@@ -1,0 +1,13 @@
+defaults:
+  - default
+  - preprocessing: preprocess
+  - evaluation: eval_classification
+
+
+
+preprocessing:
+  method:
+    set_transform:
+      transform:
+        image_root: ${run.mtvqa_image_root}
+        extension: ""

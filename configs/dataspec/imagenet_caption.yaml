@@ -1,0 +1,19 @@
+defaults:
+  - default
+  - preprocessing: preprocess
+  - evaluation: eval_logit_ranking
+
+preprocessing:
+  method:
+    map:
+      function:
+        template: "Describe the image concisely."
+    set_transform:
+      transform:
+        image_root: ${run.imagenet_image_root}
+        extension: ""
+evaluation:
+  metrics:
+    loss:
+      metric:
+        num_examples: 3

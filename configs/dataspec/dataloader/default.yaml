@@ -1,0 +1,12 @@
+_target_: torch.utils.data.dataloader.DataLoader
+collate_fn:
+  _target_: src.tasks.vllm.data.DataCollatorForVisualCLM
+  padding_side: "${oc.select:run.padding_side,left}"
+  tokenizer:
+    _target_: src.tasks.vllm.data.get_tokenizer_llava
+    model_name_or_path: ${run.llm}
+  image_processing: "${oc.select:run.vit_model,null}"
+pin_memory: true # copied into all train, val, test
+shuffle: false # will be copied in to val and test
+batch_size: "${oc.select:run.test_batch_size,32}"
+num_workers: "${oc.select:run.test_num_workers,0}"

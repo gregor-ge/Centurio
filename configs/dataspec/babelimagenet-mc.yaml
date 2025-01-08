@@ -1,0 +1,13 @@
+defaults:
+  - default
+  - preprocessing: preprocess
+  - evaluation: eval_classification
+
+preprocessing:
+  method:
+    map:
+      function:
+        template: "{}"
+    set_transform:
+      transform:
+        image_root: ${run.imagenet_image_root}

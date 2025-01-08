@@ -1,0 +1,9 @@
+defaults:
+  - /dataspec@xvnli: xvnli
+  - override /dataspec/dataloader@xvnli.dataloader: train
+
+xvnli:
+  dataset:
+    split: train
+    path: json
+    data_files: ${run.train_data}/xvnli/xvnli_input_train.json

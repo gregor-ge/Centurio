@@ -1,0 +1,12 @@
+[
+  {
+    "context": ["This is the user prompt in turn 1", "This is the user prompt in turn 2. Optional of course."],
+    "label": ["This is the reply to context[0] that will be used to compute the loss", "And the response to context[1]"],
+    "image_id": ["0000.jpg"]
+  },
+    {
+    "context": ["<image_placeholder><image_placeholder>\nThis is an example for a multi-image prompt. Note the placeholders that HAVE to be added now."],
+    "label": ["This is still the reply."],
+    "image_id": ["0000a.jpg", "0000b.jpg"]
+  }
+]

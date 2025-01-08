@@ -1,0 +1,14 @@
+defaults:
+  - default
+  - preprocessing: preprocess
+  - evaluation: eval_vqa_classification
+
+preprocessing:
+  method:
+    map:
+      function:
+        template: "{}\nAnswer the question using a single word or phrase."
+    set_transform:
+      transform:
+        image_root: ${run.textvqa_image_root}
+        extension: ""

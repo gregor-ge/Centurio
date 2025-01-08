@@ -1,0 +1,113 @@
+defaults:
+#  - /dataspec@task_mix_val: task_mix
+#  - /dataspec@xvnli_en_val: xvnli
+#  - /dataspec@xvnli_fr_val: xvnli
+#  - /dataspec@xm3600_en: xm3600
+#  - /dataspec@xm3600_fr: xm3600
+#  - /dataspec@xgqa_en_val: xgqa
+#  - /dataspec@xgqa_de_val: xgqa
+  - /dataspec@vqav2_val: vqav2
+  - /dataspec@textvqa_val: textvqa
+  - /dataspec@mme: mme
+#  - /dataspec@mscoco_val: mscoco
+  - /dataspec@mmbench_val: mmbench
+  - /dataspec@gqa_testdevb: gqa
+  - /dataspec@vstar_bench: vstar_bench
+#  - /dataspec@sugarcrepe: sugarcrepe
+#  - /dataspec@refcoco_val: refcoco
+
+vqav2_val:
+  dataset:
+    split: train[:2000]
+    path: json
+    data_files: ${run.train_data}/vqav2/vqav2_val.json
+
+textvqa_val:
+  dataset:
+    split: train
+    path: json
+    data_files: ${run.train_data}/textvqa/textvqa_val.json
+
+gqa_testdevb:
+  dataset:
+    split: train
+    path: json
+    data_files: ${run.train_data}/gqa/gqa_test.json
+
+mme:
+  dataset:
+    split: train
+    path: json
+    data_files: ${run.train_data}/MME/mme_test.json
+
+vstar_bench:
+  dataset:
+    split: train
+    path: json
+    data_files: ${run.train_data}/vstar/vstar_bench.json
+
+mmbench_val:
+  dataset:
+    split: train
+    path: json
+    data_files: ${run.train_data}/mmbench/mmbench_dev.json
+
+#mscoco_val:
+#  dataset:
+#    split: train[:512]
+#    path: json
+#    data_files: ${run.train_data}/mscoco/coco_val.json
+
+#sugarcrepe:
+#  dataset:
+#    split: train
+#    path: json
+#    data_files: ${run.train_data}/sugarcrepe/sugarcrepe.json
+#
+#refcoco_val:
+#  dataset:
+#    split: train[:1024]
+#    path: json
+#    data_files: ${run.train_data}/refcoco/refcoco_validation.json
+
+#task_mix_val:
+#  dataset:
+#    split: train[:500]
+#    path: json
+#    data_files: ${run.train_data}/llava_pretrain/llava_pretrain_converted.json
+
+#xvnli_en_val:
+#  dataset:
+#    split: train[:500]
+#    path: json
+#    data_files: ${run.train_data}/xvnli/xvnli_input_val_en.json
+#
+##xvnli_fr_val:
+##  dataset:
+##    split: train[:500]
+##    path: json
+##    data_files: ${run.train_data}/xvnli/xvnli_input_val_fr.json
+#
+#xm3600_en:
+#  dataset:
+#    split: train[:500]
+#    path: json
+#    data_files: ${run.train_data}/xm3600/xm3600_en.json
+#
+##xm3600_fr:
+##  dataset:
+##    split: train[:500]
+##    path: json
+##    data_files: ${run.train_data}/xm3600/xm3600_fr.json
+#
+#xgqa_en_val:
+#  dataset:
+#    split: train
+#    path: json
+#    data_files: ${run.train_data}/xgqa/xgqa_input_val_en.json
+#
+##xgqa_de_val:
+##  dataset:
+##    split: train
+##    path: json
+##    data_files: ${run.train_data}/xgqa/xgqa_input_val_de.json

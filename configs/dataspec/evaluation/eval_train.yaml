@@ -1,0 +1,19 @@
+prepare:
+  batch: null
+  outputs:
+    _partial_: true
+    _target_: src.tasks.vllm.evaluation.output_loss
+  step_outputs: null
+# Which keys/attributes are supposed to be collected from `outputs` and `batch`
+step_outputs:
+  outputs:
+    - "loss"
+
+metrics:
+  loss:
+    metric:
+      _partial_: True
+      _target_: src.tasks.vllm.evaluation.validation_loss
+    compute_on: "epoch_end"
+    kwargs:
+      loss: "outputs.loss"

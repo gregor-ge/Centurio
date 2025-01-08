@@ -1,0 +1,101 @@
+defaults:
+  - /dataspec@mtvqa_ar_test: mtvqa
+  - /dataspec@mtvqa_de_test: mtvqa
+  - /dataspec@mtvqa_fr_test: mtvqa
+  - /dataspec@mtvqa_it_test: mtvqa
+  - /dataspec@mtvqa_kr_test: mtvqa
+  - /dataspec@mtvqa_ja_test: mtvqa
+  - /dataspec@mtvqa_ru_test: mtvqa
+  - /dataspec@mtvqa_th_test: mtvqa
+  - /dataspec@mtvqa_vi_test: mtvqa
+
+mtvqa_ar_test:
+  dataset:
+      split: train
+      path: json
+      data_files: ${run.train_data}/mtvqa/mtvqa_test_ar.json
+  evaluation:
+    metrics:
+      acc:
+        metric:
+          dump_results: "${hydra:runtime.output_dir}/mtvqa_ar_test.json"
+mtvqa_de_test:
+  dataset:
+      split: train
+      path: json
+      data_files: ${run.train_data}/mtvqa/mtvqa_test_de.json
+  evaluation:
+    metrics:
+      acc:
+        metric:
+          dump_results: "${hydra:runtime.output_dir}/mtvqa_de_test.json"
+mtvqa_fr_test:
+  dataset:
+      split: train
+      path: json
+      data_files: ${run.train_data}/mtvqa/mtvqa_test_fr.json
+  evaluation:
+    metrics:
+      acc:
+        metric:
+          dump_results: "${hydra:runtime.output_dir}/mtvqa_fr_test.json"
+mtvqa_it_test:
+  dataset:
+      split: train
+      path: json
+      data_files: ${run.train_data}/mtvqa/mtvqa_test_it.json
+  evaluation:
+    metrics:
+      acc:
+        metric:
+          dump_results: "${hydra:runtime.output_dir}/mtvqa_it_test.json"
+mtvqa_kr_test:
+  dataset:
+      split: train
+      path: json
+      data_files: ${run.train_data}/mtvqa/mtvqa_test_kr.json
+  evaluation:
+    metrics:
+      acc:
+        metric:
+          dump_results: "${hydra:runtime.output_dir}/mtvqa_kr_test.json"
+mtvqa_ja_test:
+  dataset:
+      split: train
+      path: json
+      data_files: ${run.train_data}/mtvqa/mtvqa_test_ja.json
+  evaluation:
+    metrics:
+      acc:
+        metric:
+          dump_results: "${hydra:runtime.output_dir}/mtvqa_ja_test.json"
+mtvqa_ru_test:
+  dataset:
+      split: train
+      path: json
+      data_files: ${run.train_data}/mtvqa/mtvqa_test_ru.json
+  evaluation:
+    metrics:
+      acc:
+        metric:
+          dump_results: "${hydra:runtime.output_dir}/mtvqa_ru_test.json"
+mtvqa_th_test:
+  dataset:
+      split: train
+      path: json
+      data_files: ${run.train_data}/mtvqa/mtvqa_test_th.json
+  evaluation:
+    metrics:
+      acc:
+        metric:
+          dump_results: "${hydra:runtime.output_dir}/mtvqa_th_test.json"
+mtvqa_vi_test:
+  dataset:
+      split: train
+      path: json
+      data_files: ${run.train_data}/mtvqa/mtvqa_test_vi.json
+  evaluation:
+    metrics:
+      acc:
+        metric:
+          dump_results: "${hydra:runtime.output_dir}/mtvqa_vi_test.json"

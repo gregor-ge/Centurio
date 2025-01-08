@@ -1,0 +1,37 @@
+defaults:
+  - /dataspec@marvl_id_val: marvl
+#  - /dataspec@marvl_sw_val: marvl
+#  - /dataspec@marvl_ta_val: marvl
+#  - /dataspec@marvl_zh_val: marvl
+  - /dataspec@nlvr_en_val: marvl
+
+marvl_id_val:
+  dataset:
+    split: train[:2000]
+    path: json
+    data_files: ${run.train_data}/marvl/marvl_dev_id.json
+#marvl_sw_val:
+#  dataset:
+#    split: train[:2000]
+#    path: json
+#    data_files: ${run.train_data}/marvl/marvl_dev_sw.json
+#marvl_ta_val:
+#  dataset:
+#    split: train[:2000]
+#    path: json
+#    data_files: ${run.train_data}/marvl/marvl_dev_ta.json
+#marvl_tr_val:
+#  dataset:
+#    split: train[:2000]
+#    path: json
+#    data_files: ${run.train_data}/marvl/marvl_dev_tr.json
+#marvl_zh_val:
+#  dataset:
+#    split: train[:2000]
+#    path: json
+#    data_files: ${run.train_data}/marvl/marvl_dev_zh.json
+nlvr_en_val:
+  dataset:
+    split: train[:2000]
+    path: json
+    data_files: ${run.train_data}/marvl/nlvr_dev_en.json

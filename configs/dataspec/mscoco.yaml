@@ -1,0 +1,19 @@
+defaults:
+  - default
+  - preprocessing: preprocess
+  - evaluation: eval_captioning
+
+preprocessing:
+  method:
+    map:
+      function:
+        template: "Describe the image concisely."
+    set_transform:
+      transform:
+        image_root: ${run.flickr_image_root}
+        extension: ""
+evaluation:
+  metrics:
+    caption_metrics:
+      metric:
+        annotation_file: "${run.train_data}/mscoco/coco_coco_val.json"

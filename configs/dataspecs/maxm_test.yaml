@@ -1,0 +1,79 @@
+defaults:
+  - /dataspec@maxm_en_test: maxm
+  - /dataspec@maxm_fr_test: maxm
+  - /dataspec@maxm_hi_test: maxm
+  - /dataspec@maxm_iw_test: maxm
+  - /dataspec@maxm_ro_test: maxm
+  - /dataspec@maxm_th_test: maxm
+  - /dataspec@maxm_zh_test: maxm
+
+maxm_en_test:
+  dataset:
+    split: train
+    path: json
+    data_files: ${run.train_data}/maxm/maxm_en_test.json
+  evaluation:
+    metrics:
+      vqa_acc:
+        metric:
+          dump_results: "${hydra:runtime.output_dir}/maxm_en_test.json"
+maxm_fr_test:
+  dataset:
+    split: train
+    path: json
+    data_files: ${run.train_data}/maxm/maxm_fr_test.json
+  evaluation:
+    metrics:
+      vqa_acc:
+        metric:
+          dump_results: "${hydra:runtime.output_dir}/maxm_fr_test.json"
+maxm_hi_test:
+  dataset:
+    split: train
+    path: json
+    data_files: ${run.train_data}/maxm/maxm_hi_test.json
+  evaluation:
+    metrics:
+      vqa_acc:
+        metric:
+          dump_results: "${hydra:runtime.output_dir}/maxm_hi_test.json"
+maxm_iw_test:
+  dataset:
+    split: train
+    path: json
+    data_files: ${run.train_data}/maxm/maxm_iw_test.json
+  evaluation:
+    metrics:
+      vqa_acc:
+        metric:
+          dump_results: "${hydra:runtime.output_dir}/maxm_iw_test.json"
+maxm_ro_test:
+  dataset:
+    split: train
+    path: json
+    data_files: ${run.train_data}/maxm/maxm_ro_test.json
+  evaluation:
+    metrics:
+      vqa_acc:
+        metric:
+          dump_results: "${hydra:runtime.output_dir}/maxm_ro_test.json"
+maxm_th_test:
+  dataset:
+    split: train
+    path: json
+    data_files: ${run.train_data}/maxm/maxm_th_test.json
+  evaluation:
+    metrics:
+      vqa_acc:
+        metric:
+          dump_results: "${hydra:runtime.output_dir}/maxm_th_test.json"
+maxm_zh_test:
+  dataset:
+    split: train
+    path: json
+    data_files: ${run.train_data}/maxm/maxm_zh_test.json
+  evaluation:
+    metrics:
+      vqa_acc:
+        metric:
+          dump_results: "${hydra:runtime.output_dir}/maxm_zh_test.json"

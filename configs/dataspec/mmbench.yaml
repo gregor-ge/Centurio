@@ -1,0 +1,14 @@
+defaults:
+  - default
+  - preprocessing: preprocess
+  - evaluation: eval_mmbench
+
+preprocessing:
+  method:
+    map:
+      function:
+        template: '{}\nAnswer with the option’s letter from the given choices directly.'
+    set_transform:
+      transform:
+        image_root: ${run.mmbench_image_root}
+        extension: ""

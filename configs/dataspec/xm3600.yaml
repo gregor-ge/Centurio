@@ -1,0 +1,19 @@
+defaults:
+  - default
+  - preprocessing: preprocess
+  - evaluation: eval_captioning
+
+preprocessing:
+  method:
+    map:
+      function:
+        template: "Briefly describe the image in {} in one sentence."
+    set_transform:
+      transform:
+        image_root: ${run.xm3600_image_root}
+        extension: ".jpg"
+evaluation:
+  metrics:
+    caption_metrics:
+      metric:
+        annotation_file: "${run.train_data}/xm3600/xm3600_coco_{}.json"

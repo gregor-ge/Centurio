@@ -1,0 +1,222 @@
+defaults:
+  - /dataspec@babelimagenet-mc_en_test: babelimagenet-mc
+  - /dataspec@babelimagenet-mc_mi_test: babelimagenet-mc
+  - /dataspec@babelimagenet-mc_no_test: babelimagenet-mc
+  - /dataspec@babelimagenet-mc_te_test: babelimagenet-mc
+  - /dataspec@babelimagenet-mc_am_test: babelimagenet-mc
+  - /dataspec@babelimagenet-mc_ha_test: babelimagenet-mc
+  - /dataspec@babelimagenet-mc_zu_test: babelimagenet-mc
+  - /dataspec@babelimagenet-mc_af_test: babelimagenet-mc
+  - /dataspec@babelimagenet-mc_el_test: babelimagenet-mc
+  - /dataspec@babelimagenet-mc_ro_test: babelimagenet-mc
+  - /dataspec@babelimagenet-mc_ta_test: babelimagenet-mc
+  - /dataspec@babelimagenet-mc_hr_test: babelimagenet-mc
+  - /dataspec@babelimagenet-mc_cs_test: babelimagenet-mc
+  - /dataspec@babelimagenet-mc_nl_test: babelimagenet-mc
+  - /dataspec@babelimagenet-mc_fi_test: babelimagenet-mc
+  - /dataspec@babelimagenet-mc_hu_test: babelimagenet-mc
+  - /dataspec@babelimagenet-mc_fa_test: babelimagenet-mc
+  - /dataspec@babelimagenet-mc_pl_test: babelimagenet-mc
+  - /dataspec@babelimagenet-mc_es_test: babelimagenet-mc
+  - /dataspec@babelimagenet-mc_ja_test: babelimagenet-mc
+
+babelimagenet-mc_en_test:
+  dataset:
+      split: train
+      path: json
+      data_files: ${run.train_data}/babel-imagenet/mc_bin_en_8.json
+  evaluation:
+    metrics:
+      acc:
+        metric:
+          dump_results: "${hydra:runtime.output_dir}/babelimagenet-mc_en.json"
+babelimagenet-mc_mi_test:
+  dataset:
+      split: train
+      path: json
+      data_files: ${run.train_data}/babel-imagenet/mc_bin_mi_8.json
+  evaluation:
+    metrics:
+      acc:
+        metric:
+          dump_results: "${hydra:runtime.output_dir}/babelimagenet-mc_mi.json"
+babelimagenet-mc_no_test:
+  dataset:
+      split: train
+      path: json
+      data_files: ${run.train_data}/babel-imagenet/mc_bin_no_8.json
+  evaluation:
+    metrics:
+      acc:
+        metric:
+          dump_results: "${hydra:runtime.output_dir}/babelimagenet-mc_no.json"
+babelimagenet-mc_te_test:
+  dataset:
+      split: train
+      path: json
+      data_files: ${run.train_data}/babel-imagenet/mc_bin_te_8.json
+  evaluation:
+    metrics:
+      acc:
+        metric:
+          dump_results: "${hydra:runtime.output_dir}/babelimagenet-mc_te.json"
+babelimagenet-mc_am_test:
+  dataset:
+      split: train
+      path: json
+      data_files: ${run.train_data}/babel-imagenet/mc_bin_am_8.json
+  evaluation:
+    metrics:
+      acc:
+        metric:
+          dump_results: "${hydra:runtime.output_dir}/babelimagenet-mc_am.json"
+babelimagenet-mc_ha_test:
+  dataset:
+      split: train
+      path: json
+      data_files: ${run.train_data}/babel-imagenet/mc_bin_ha_8.json
+  evaluation:
+    metrics:
+      acc:
+        metric:
+          dump_results: "${hydra:runtime.output_dir}/babelimagenet-mc_ha.json"
+babelimagenet-mc_zu_test:
+  dataset:
+      split: train
+      path: json
+      data_files: ${run.train_data}/babel-imagenet/mc_bin_zu_8.json
+  evaluation:
+    metrics:
+      acc:
+        metric:
+          dump_results: "${hydra:runtime.output_dir}/babelimagenet-mc_zu.json"
+babelimagenet-mc_af_test:
+  dataset:
+      split: train
+      path: json
+      data_files: ${run.train_data}/babel-imagenet/mc_bin_af_8.json
+  evaluation:
+    metrics:
+      acc:
+        metric:
+          dump_results: "${hydra:runtime.output_dir}/babelimagenet-mc_af.json"
+babelimagenet-mc_el_test:
+  dataset:
+      split: train
+      path: json
+      data_files: ${run.train_data}/babel-imagenet/mc_bin_el_8.json
+  evaluation:
+    metrics:
+      acc:
+        metric:
+          dump_results: "${hydra:runtime.output_dir}/babelimagenet-mc_el.json"
+babelimagenet-mc_ro_test:
+  dataset:
+      split: train
+      path: json
+      data_files: ${run.train_data}/babel-imagenet/mc_bin_ro_8.json
+  evaluation:
+    metrics:
+      acc:
+        metric:
+          dump_results: "${hydra:runtime.output_dir}/babelimagenet-mc_ro.json"
+babelimagenet-mc_ta_test:
+  dataset:
+      split: train
+      path: json
+      data_files: ${run.train_data}/babel-imagenet/mc_bin_ta_8.json
+  evaluation:
+    metrics:
+      acc:
+        metric:
+          dump_results: "${hydra:runtime.output_dir}/babelimagenet-mc_ta.json"
+babelimagenet-mc_hr_test:
+  dataset:
+      split: train
+      path: json
+      data_files: ${run.train_data}/babel-imagenet/mc_bin_hr_8.json
+  evaluation:
+    metrics:
+      acc:
+        metric:
+          dump_results: "${hydra:runtime.output_dir}/babelimagenet-mc_hr.json"
+babelimagenet-mc_cs_test:
+  dataset:
+      split: train
+      path: json
+      data_files: ${run.train_data}/babel-imagenet/mc_bin_cs_8.json
+  evaluation:
+    metrics:
+      acc:
+        metric:
+          dump_results: "${hydra:runtime.output_dir}/babelimagenet-mc_cs.json"
+babelimagenet-mc_nl_test:
+  dataset:
+      split: train
+      path: json
+      data_files: ${run.train_data}/babel-imagenet/mc_bin_nl_8.json
+  evaluation:
+    metrics:
+      acc:
+        metric:
+          dump_results: "${hydra:runtime.output_dir}/babelimagenet-mc_nl.json"
+babelimagenet-mc_fi_test:
+  dataset:
+      split: train
+      path: json
+      data_files: ${run.train_data}/babel-imagenet/mc_bin_fi_8.json
+  evaluation:
+    metrics:
+      acc:
+        metric:
+          dump_results: "${hydra:runtime.output_dir}/babelimagenet-mc_fi.json"
+babelimagenet-mc_hu_test:
+  dataset:
+      split: train
+      path: json
+      data_files: ${run.train_data}/babel-imagenet/mc_bin_hu_8.json
+  evaluation:
+    metrics:
+      acc:
+        metric:
+          dump_results: "${hydra:runtime.output_dir}/babelimagenet-mc_hu.json"
+babelimagenet-mc_fa_test:
+  dataset:
+      split: train
+      path: json
+      data_files: ${run.train_data}/babel-imagenet/mc_bin_fa_8.json
+  evaluation:
+    metrics:
+      acc:
+        metric:
+          dump_results: "${hydra:runtime.output_dir}/babelimagenet-mc_fa.json"
+babelimagenet-mc_pl_test:
+  dataset:
+      split: train
+      path: json
+      data_files: ${run.train_data}/babel-imagenet/mc_bin_pl_8.json
+  evaluation:
+    metrics:
+      acc:
+        metric:
+          dump_results: "${hydra:runtime.output_dir}/babelimagenet-mc_pl.json"
+babelimagenet-mc_es_test:
+  dataset:
+      split: train
+      path: json
+      data_files: ${run.train_data}/babel-imagenet/mc_bin_es_8.json
+  evaluation:
+    metrics:
+      acc:
+        metric:
+          dump_results: "${hydra:runtime.output_dir}/babelimagenet-mc_es.json"
+babelimagenet-mc_ja_test:
+  dataset:
+      split: train
+      path: json
+      data_files: ${run.train_data}/babel-imagenet/mc_bin_ja_8.json
+  evaluation:
+    metrics:
+      acc:
+        metric:
+          dump_results: "${hydra:runtime.output_dir}/babelimagenet-mc_ja.json"

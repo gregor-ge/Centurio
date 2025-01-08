@@ -1,0 +1,50 @@
+defaults:
+  - /dataspec@flickr_en: xflickrco
+  - /dataspec@flickr_de: xflickrco
+  - /dataspec@flickr_es: xflickrco
+  - /dataspec@flickr_id: xflickrco
+  - /dataspec@flickr_ja: xflickrco
+  - /dataspec@flickr_ru: xflickrco
+  - /dataspec@flickr_tr: xflickrco
+  - /dataspec@flickr_zh: xflickrco
+
+flickr_en:
+  dataset:
+    split: train
+    path: json
+    data_files: ${run.train_data}/flickr/flickr__test.json
+flickr_de:
+  dataset:
+    split: train
+    path: json
+    data_files: ${run.train_data}/flickr/flickr_de_test.json
+flickr_es:
+  dataset:
+    split: train
+    path: json
+    data_files: ${run.train_data}/flickr/flickr_es_test.json
+flickr_id:
+  dataset:
+    split: train
+    path: json
+    data_files: ${run.train_data}/flickr/flickr_id_test.json
+flickr_ja:
+  dataset:
+    split: train
+    path: json
+    data_files: ${run.train_data}/flickr/flickr_ja_test.json
+flickr_ru:
+  dataset:
+    split: train
+    path: json
+    data_files: ${run.train_data}/flickr/flickr_ru_test.json
+flickr_tr:
+  dataset:
+    split: train
+    path: json
+    data_files: ${run.train_data}/flickr/flickr_tr_test.json
+flickr_zh:
+  dataset:
+    split: train
+    path: json
+    data_files: ${run.train_data}/flickr/flickr_zh_test.json

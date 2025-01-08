@@ -1,0 +1,37 @@
+defaults:
+  - /dataspec@marvl_id_test: marvl
+  - /dataspec@marvl_sw_test: marvl
+  - /dataspec@marvl_ta_test: marvl
+  - /dataspec@marvl_zh_test: marvl
+  - /dataspec@nlvr_en_test: marvl
+
+marvl_id_test:
+  dataset:
+    split: train
+    path: json
+    data_files: ${run.train_data}/marvl/marvl_test_id.json
+marvl_sw_test:
+  dataset:
+    split: train
+    path: json
+    data_files: ${run.train_data}/marvl/marvl_test_sw.json
+marvl_ta_test:
+  dataset:
+    split: train
+    path: json
+    data_files: ${run.train_data}/marvl/marvl_test_ta.json
+marvl_tr_test:
+  dataset:
+    split: train
+    path: json
+    data_files: ${run.train_data}/marvl/marvl_test_tr.json
+marvl_zh_test:
+  dataset:
+    split: train
+    path: json
+    data_files: ${run.train_data}/marvl/marvl_test_zh.json
+nlvr_en_test:
+  dataset:
+    split: train
+    path: json
+    data_files: ${run.train_data}/marvl/nlvr_test_en.json

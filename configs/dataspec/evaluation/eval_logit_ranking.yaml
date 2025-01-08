@@ -1,0 +1,25 @@
+prepare:
+  batch: null
+  outputs:
+    _partial_: true
+    _target_: src.tasks.vllm.evaluation.output_logits
+  step_outputs: null
+# Which keys/attributes are supposed to be collected from `outputs` and `batch`
+step_outputs:
+  outputs:
+    - "log_probs"
+  batch:
+    - "image_id"
+    - "text_label"
+
+metrics:
+  loss:
+    metric:
+      _partial_: True
+      _target_: src.tasks.vllm.evaluation.log_probs_eval
+      num_examples: 4
+    compute_on: "epoch_end"
+    kwargs:
+      log_probs: "outputs.log_probs"
+      image_ids: "outputs.image_id"
+      text_labels: "outputs.text_label"

@@ -1,0 +1,8 @@
+[
+  {
+    "context": ["This is the question/ user prompt."],
+    "label": [""], # should be empty!
+    "text_label": "This is the answer",
+    "image_id": "0000.jpg"
+  }
+]

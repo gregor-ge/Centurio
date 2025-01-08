@@ -1,0 +1,37 @@
+prepare:
+  batch:
+      _partial_: True
+      _target_: src.tasks.vllm.evaluation.set_generation_mode
+      mode: generate
+      num_beams: 1
+      max_new_tokens: 10
+      min_new_tokens: 1
+      length_penalty: -1
+  outputs:
+      _target_: src.tasks.vllm.evaluation.OutputGenerate
+      tokenizer: ${run.llm}
+  step_outputs: null
+
+# Which keys/attributes are supposed to be collected from `outputs` and `batch`
+step_outputs:
+    outputs:
+      - "caption"
+    batch:
+      - "image_id"
+      - "text_label"
+
+# either metrics or val_metrics and test_metrics
+# where the latter
+# metrics should be copied for each dataset by default unless _datasets_ is specified
+metrics:
+  # name of the metric used eg for logging
+    vqa_acc:
+      metric:
+        _partial_: True
+        _target_: src.tasks.vllm.evaluation.mmbench_eval
+        print_examples: 4
+      compute_on: "epoch_end"
+      kwargs:
+        image_ids: "outputs.image_id"
+        text_labels: "outputs.text_label"
+        captions: "outputs.caption"

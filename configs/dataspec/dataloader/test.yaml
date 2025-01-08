@@ -1,0 +1,12 @@
+defaults:
+  - default
+
+collate_fn:
+  _target_: src.tasks.vllm.data.DataCollatorForVisualCLM
+  padding_side: "${oc.select:run.test_padding_side,left}"
+  tokenizer:
+    _target_: src.tasks.vllm.data.get_tokenizer_llava
+    model_name_or_path: ${run.llm}
+  image_processing: "${oc.select:run.vit_model,null}"
+batch_size: "${run.test_batch_size,32}"
+num_workers: "${run.test_num_workers,0}"

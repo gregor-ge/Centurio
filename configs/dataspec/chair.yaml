@@ -1,0 +1,16 @@
+defaults:
+  - default
+  - preprocessing: preprocess
+  - evaluation: eval_chair
+
+preprocessing:
+  method:
+    set_transform:
+      transform:
+        image_root: ${run.flickr_image_root}
+        extension: ""
+evaluation:
+  metrics:
+    cider:
+      metric:
+        annotation_file: "${run.train_data}/mscoco/coco_coco_val.json"

@@ -1,0 +1,15 @@
+defaults:
+  - default
+  - preprocessing: preprocess
+  - evaluation: eval_train
+
+preprocessing:
+  method:
+    map: # dataset.map -> tokenization
+      function:
+        template: 'Is it guaranteed true that "{}"? Yes, no, or maybe? Answer in English:'
+        target2str: { "yes": "yes", "no": "no", "maybe": "maybe" }
+    set_transform:
+      transform:
+        image_root: ${run.flickr_image_root}
+        extension: ".jpg"

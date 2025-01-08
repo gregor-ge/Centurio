@@ -1,0 +1,13 @@
+defaults:
+  - default
+  - dataloader: dpo_train
+  - preprocessing: preprocess_lazy_dpo
+  - evaluation: eval_train # train
+
+preprocessing:
+  method:
+    set_transform:
+      transform:
+        image_process:
+          image_root: ${run.train_image_root}
+          extension: ""

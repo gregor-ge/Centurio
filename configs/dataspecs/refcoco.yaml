@@ -1,0 +1,38 @@
+defaults:
+  - /dataspec@refcoco_test: refcoco
+  - /dataspec@refcocog_test: refcoco
+  - /dataspec@refcocoplus_test: refcoco
+
+refcoco_test:
+  dataset:
+    split: train
+    path: json
+    data_files: ${run.train_data}/refcoco/refcoco_test.json
+  preprocessing:
+    method:
+      map:
+        function:
+          template: 'Give the bounding box coordinates for the region described as "{}"'
+
+refcocog_test:
+  dataset:
+    split: train
+    path: json
+    data_files: ${run.train_data}/refcoco/refcocog_test.json
+  preprocessing:
+    method:
+      map:
+        function:
+          template: 'Give the bounding box coordinates for the region described as "{}"'
+
+
+refcocoplus_test:
+  dataset:
+    split: train
+    path: json
+    data_files: ${run.train_data}/refcoco/refcocoplus_test.json
+  preprocessing:
+    method:
+      map:
+        function:
+          template: 'Give the bounding box coordinates for the region described as "{}"'

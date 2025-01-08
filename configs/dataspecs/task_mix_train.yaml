@@ -1,0 +1,9 @@
+defaults:
+  - /dataspec@task_mix: task_mix
+  - override /dataspec/dataloader@task_mix.dataloader: train
+
+task_mix:
+  dataset:
+    split: train[500:]
+    path: json
+    data_files: ${run.train_data}/pretrain/${run.train_file}

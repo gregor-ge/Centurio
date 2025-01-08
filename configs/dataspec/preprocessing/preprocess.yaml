@@ -1,0 +1,20 @@
+method:
+  map:
+    function:
+      _target_: src.tasks.vllm.data.ProcessConversation
+      pretrained_model: ${run.llm}
+      context_column: context
+      target_column: label
+      template: "{}"
+      max_len: "${oc.select:run.max_seq_len,1024}"
+      image_tokens: "${oc.select:run.image_tokens,-1}"
+    batched: True
+  set_transform:
+    transform:
+      _target_: src.tasks.vllm.data.LoadTransformImage
+      processor: ${run.vit_model}
+      image_root: ???
+      extension: ""
+      multi_scale: "${oc.select:run.multi_scale,1}"
+      overwrite_size: "${oc.select:run.overwrite_size,-1}"
+      mode: "${oc.select:run.image_process_mode,square}"

@@ -1,0 +1,90 @@
+defaults:
+  - /dataspec@xgqa_bn_test: xgqa
+  - /dataspec@xgqa_de_test: xgqa
+  - /dataspec@xgqa_en_test: xgqa
+  - /dataspec@xgqa_id_test: xgqa
+  - /dataspec@xgqa_ko_test: xgqa
+  - /dataspec@xgqa_pt_test: xgqa
+  - /dataspec@xgqa_ru_test: xgqa
+  - /dataspec@xgqa_zh_test: xgqa
+
+xgqa_bn_test:
+  dataset:
+      split: train
+      path: json
+      data_files: ${run.train_data}/xgqa/xgqa_input_test_bn.json
+  evaluation:
+    metrics:
+      acc:
+        metric:
+          dump_results: "${hydra:runtime.output_dir}/xgqa_bn_test.json"
+xgqa_de_test:
+  dataset:
+      split: train
+      path: json
+      data_files: ${run.train_data}/xgqa/xgqa_input_test_de.json
+  evaluation:
+    metrics:
+      acc:
+        metric:
+          dump_results: "${hydra:runtime.output_dir}/xgqa_de_test.json"
+xgqa_en_test:
+  dataset:
+      split: train
+      path: json
+      data_files: ${run.train_data}/xgqa/xgqa_input_test_en.json
+  evaluation:
+    metrics:
+      acc:
+        metric:
+          dump_results: "${hydra:runtime.output_dir}/xgqa_en_test.json"
+xgqa_id_test:
+  dataset:
+      split: train
+      path: json
+      data_files: ${run.train_data}/xgqa/xgqa_input_test_id.json
+  evaluation:
+    metrics:
+      acc:
+        metric:
+          dump_results: "${hydra:runtime.output_dir}/xgqa_id_test.json"
+xgqa_ko_test:
+  dataset:
+      split: train
+      path: json
+      data_files: ${run.train_data}/xgqa/xgqa_input_test_ko.json
+  evaluation:
+    metrics:
+      acc:
+        metric:
+          dump_results: "${hydra:runtime.output_dir}/xgqa_ko_test.json"
+xgqa_pt_test:
+  dataset:
+      split: train
+      path: json
+      data_files: ${run.train_data}/xgqa/xgqa_input_test_pt.json
+  evaluation:
+    metrics:
+      acc:
+        metric:
+          dump_results: "${hydra:runtime.output_dir}/xgqa_pt_test.json"
+xgqa_ru_test:
+  dataset:
+      split: train
+      path: json
+      data_files: ${run.train_data}/xgqa/xgqa_input_test_ru.json
+  evaluation:
+    metrics:
+      acc:
+        metric:
+          dump_results: "${hydra:runtime.output_dir}/xgqa_ru_test.json"
+xgqa_zh_test:
+  dataset:
+      split: train
+      path: json
+      data_files: ${run.train_data}/xgqa/xgqa_input_test_zh.json
+  evaluation:
+    metrics:
+      acc:
+        metric:
+          dump_results: "${hydra:runtime.output_dir}/xgqa_zh_test.json"

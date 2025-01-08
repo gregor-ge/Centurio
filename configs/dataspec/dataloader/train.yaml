@@ -1,0 +1,13 @@
+defaults:
+  - default
+
+collate_fn:
+  _target_: src.tasks.vllm.data.DataCollatorForVisualCLM
+  padding_side: "${oc.select:run.train_padding_side,right}"
+  tokenizer:
+    _target_: src.tasks.vllm.data.get_tokenizer_llava
+    model_name_or_path: ${run.llm}
+  image_processing: "${oc.select:run.vit_model,null}"
+shuffle: "${oc.select:run.train_shuffle,true}"
+batch_size: "${oc.select:run.train_batch_size,32}"
+num_workers: "${oc.select:run.train_num_workers,0}"
