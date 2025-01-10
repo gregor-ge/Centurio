@@ -1,6 +1,6 @@
 # Centurio: On Drivers of Multilingual Ability of Large Vision-Language Model
 
-[![arXiv](https://img.shields.io/badge/arXiv-Paper-<COLOR>.svg)](https://arxiv.org/abs/2501.)
+[![arXiv](https://img.shields.io/badge/arXiv-Paper-<COLOR>.svg)](https://arxiv.org/abs/2501.05122)
 [![Hugging Face](https://img.shields.io/badge/Collection-%F0%9F%A4%97%20Hugging%20Face-orange)](https://huggingface.co/collections/WueNLP/centurio-677cf0ab6ddea874927a154e) 
 
 ## Release
@@ -179,10 +179,10 @@ python -u -m trident.run experiment=mblipv2_test_maxm \
                   Goran Glava\v{s}},
   title        = {Centurio: On Drivers of Multilingual Ability of Large Vision-Language Model},
   journal      = {arXiv},
-  volume       = {abs/2501.},
+  volume       = {abs/2501.05122},
   year         = {2025},
-  url          = {https://arxiv.org/abs/2501.},
+  url          = {https://arxiv.org/abs/2501.05122},
   eprinttype    = {arXiv},
-  eprint       = {2501.},
+  eprint       = {2501.05122},
 }
 ```
