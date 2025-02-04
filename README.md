@@ -4,6 +4,7 @@
 [![Hugging Face](https://img.shields.io/badge/Collection-%F0%9F%A4%97%20Hugging%20Face-orange)](https://huggingface.co/collections/WueNLP/centurio-677cf0ab6ddea874927a154e) 
 
 ## Release
+- [2025/02/04] We uploaded our Synthdog data to HuggingFace: [Dataset](https://huggingface.co/datasets/WueNLP/Synthdog-Multilingual-100)
 - [2025/01/10] We released Centurio with model checkpoints and code for training & testing. Data will follow soon.
 
 
